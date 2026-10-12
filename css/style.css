@@ -108,6 +108,7 @@ font-size: var(--font-size-xl);
     font-family: Poppins, sans-serif;
     margin-bottom: var(--margin-sm);
     font-weight: lighter;
+    animation: fadeInDown 0.6s ease-in; /* Subtext animation */
 }
 
 .home-text h1 {
@@ -119,12 +120,6 @@ font-size: var(--font-size-xl);
     animation: fadeInDown 1.2s ease-in; /* Heading animation */
 }
 
-.home-text p {
-    margin-bottom: var(--margin-lg);
-    font-family: SansSerif;
-    font-size: var(--font-size-lg);
-    animation: fadeInDown 0.6s ease-in; /* Subtext animation */
-}
 
 /* Keyframes for easing elements into the page */
 @keyframes fadeInDown {
@@ -173,7 +168,7 @@ font-size: var(--font-size-xl);
     text-align: center;
     font-weight: lighter;
     font-family: Poppins, sans-serif;
-    color: var(--primary-colour);
+    color: var(--secondary-color);
     font-size: var(--font-size-2xl);
 
 }
@@ -181,34 +176,64 @@ font-size: var(--font-size-xl);
     background-color: var(--primary-colour);
     padding: var(--padding-lg);
     flex-direction: column;
+    justify-items: center;
     text-align: center; /* Center the inline-flex cards */
+    margin: var(--margin-lg);
 }
+.home-text p {
+    margin-bottom: var(--margin-lg);
+    font-family: Poppins, sans-serif;
+    font-size: var(--font-size-lg);
+    color: var(--color-3);
+
+}
+
 .card-container {
-    display: inline-flex; /* Allow cards to sit next to each other */
-    flex-direction: column; /* Keep image and text stacked vertically */
-    align-items: center; /* Center content within the card */
-    padding: var(--padding-md); /* Internal padding */
+    display: flex; /* Allow cards to sit next to each other */
+    justify-items: center;
+    padding: var(--padding-lg); /* Internal padding */
     border-radius: var(--radius-md); /* Rounded corners */
-    background-color: var(--color2);
-    margin: var(--margin-md); /* Space between cards */
-    max-width: 300px; /* Limit card width */
-    vertical-align: top; /* Align cards at the top if they have different heights */
+    margin: var(--margin-lg); /* Space between cards */
+    /*vertical-align: top;  Align cards at the top if they have different heights */
 }
-
-.card-container:hover {
+.card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: var(--padding-md);
+    border-radius: var(--radius-md);
+    background-color: var(--color-2);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    margin: var(--margin-sm);
+}
+.card-description{
+    display: none;
+    font-size: var(--font-size-base);
+}
+.card:hover{
     transform: translateY(-5px);
+    transition: all 0.3s ease-in-out;
+}
+.card:hover .card-description{
+    display: block;
+
+}
+.card:hover .card-img-top{
+    display:none;
 }
 
-.card-img img {
+.card-img-img {
     border-radius: var(--radius-md);
     object-fit: cover;
     margin-bottom: var(--margin-sm);
+    height: var(--font-size-xl);
+
 }
 
-.card-content p {
-    font-weight: bold;
-    color: var(--primary-colour);
-    font-size: var(--font-size-lg);
+.card h3{
+    font-weight: lighter;
+    color: var(--color-3);
 }
 .primary-button{
     display: inline-block;
@@ -222,6 +247,7 @@ font-size: var(--font-size-xl);
 .primary-button:hover{
     background-color: var(--color-1);
 }
+
 /*Service Page*/
 .services-landing-page {
     background-size: cover;
@@ -342,10 +368,9 @@ font-size: var(--font-size-xl);
     display: inline-flex;
     flex-direction: row;
     padding: var(--padding-lg);
-    min-height: 80vh;
     align-items: center;
     gap: var(--gap-lg);
-    margin: var(--margin-lg);
+    background:hsl(31,30%,70%);
 }
 
 .about-content{
@@ -378,31 +403,33 @@ font-size: var(--font-size-xl);
 /*form*/
 .contact-section {
     padding: var(--padding-xl);
-    background-color: var(--color-3);
+    background-color: var(--primary-colour);
     text-align: left;
     margin-bottom: var(--margin-lg);
     min-height: 60vh;
-    gap:var(--gap-lg);
+    gap:var(--gap-md);
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    align-items: center;
+
 
 }
 
 .contact-content {
     text-align: left;
-    width: 100%;
-    display: flex;
+    width: 700px;
     flex-direction: column;
     /*flex:1;*/
     justify-items: center;
-    color: var(--primary-colour);
+    color: var(--color-3);
 }
 
 .contact-content h3 {
     font-size: var(--font-size-2xl);
     margin-bottom: var(--margin-md);
-    align-items: center;
-    font-weight: lighter;
+    flex-direction: column;
+    font-weight: normal;
+
 }
 
 .contact-content h2 {
@@ -416,7 +443,7 @@ font-size: var(--font-size-xl);
 .contact-form form {
     display: flex;
     flex: 0.5;
-    background-color: var(--color-2);
+    background-color: var(--secondary-color);
     flex-direction: column;
     gap: var(--gap-sm);
     width: 60vh;
@@ -438,6 +465,7 @@ font-size: var(--font-size-xl);
     cursor: pointer;
     border: none;
     width: 50%;
+    background-color: var(--color-3);
 }
 .contact-form label{
     font-size: var(--font-size-xl);
@@ -451,7 +479,8 @@ font-size: var(--font-size-xl);
     background-color: var(--color-1);
     padding: var(--padding-lg);
     flex-direction: column;
-    text-align: center; /* Center the inline-flex cards */
+    height:50vh;
+    text-align: left; /* Center the inline-flex cards */
 }
 .footer-content{
     display: flex;
@@ -459,14 +488,28 @@ font-size: var(--font-size-xl);
     flex-direction: row;
     text-align: left;
     gap: var(--gap-lg);
-    justify-content: space-evenly;
-    font-family: 'SansSerif';
+    padding: var(--padding-lg);
+    font-family: Poppins, sans-serif;
 }
 .footer-content h3{
+    font-weight: bold;
     font-size: var(--font-size-xl);
 }
 .footer-content p{
     font-size: var(--font-size-lg);
+}
+.footer-content a{
+    font-size: var(--font-size-lg);
+    color: var(--primary-colour);
+    text-align: center;
+    margin-top: var(--margin-md);
+    text-decoration: none;
+ }
+.copyright{
+    text-align: right;
+    color: var(--primary-colour);
+    font-size: var(--font-size-base);
+    margin-top: var(--margin-md);
 }
 
 

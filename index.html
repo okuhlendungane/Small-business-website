@@ -5,6 +5,9 @@
     <title>Gambu-Line Hiring Services</title>
     <link rel="stylesheet" href="css/style.css">
 
+    <!--bootstrap-->
+    <link rel ="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+
     <!--  FONT playfair-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -34,39 +37,58 @@ contactLink="#contact"
         <a href="#services" class ="cta-button"> Learn More</a>
     </div>
 </div>
-<!--about business section-->
-
-
 
 <!-- Services Section -->
-<div id="services" class="service-container">
-    <div class="home-text">
-    <h1>What We Offer</h1>
-    <p> Gambu-Line Hiring Services provides high-quality mobile cold rooms, VIP & VVIP toilets, chairs, tables, and professional sound systems with microphones—everything you need to run a seamless event. We bring convenience, comfort, and reliability straight to your venue, so you can focus on making your event unforgettable.</p>
-    <div class="service-content">
 
 
-        <service-card
-                imgLink="img/img5.jpeg"
-                itemName="VIP Toilets">
-        </service-card>
-        <service-card
-                imgLink="img/img8.jpeg"
-                itemName="VVIP Toilets">
-        </service-card>
-        <service-card
-                imgLink="img/img3.jpeg"
-                itemName="Mobile Coldroom">
-        </service-card>
-        <service-card
-                imgLink="img/img7.jpeg"
-                itemName="Sound Systems">
-        </service-card>
-    </div>
-    <a class="primary-button" href="html/services.html"> Learn More</a>
-</div>
+    <div id="services" class="service-container">
+        <div class="home-text">
+            <div class="mx-auto" style="width: 700px;">
+                <h1>What We Offer</h1>
+                <p> Gambu-Line Hiring Services provides high-quality mobile cold rooms, VIP & VVIP toilets, chairs, tables, and professional sound systems with microphones—everything you need to run a seamless event. We bring convenience, comfort, and reliability straight to your venue, so you can focus on making your event unforgettable.
+                    Perfect for hosting your wedding,funerals, imigidi and more.
+                </p>
+            </div>
+            </div>
+
+                <div class="card-container">
+                    <div class="card" style="width: 18rem;">
+                        <h3 class="card-text">VIP Toilets</h3>
+                        <img src="img/img5.jpeg" class="card-img-top" alt="...">
+                        <div class="card-description">
+                            <p>Our VIP toilets are designed for comfort and hygiene, featuring foot-flush systems, running water sinks, and essential amenities. Perfect for weddings, funerals, and other events where guest comfort is a priority.</p>
+                        </div>
+                    </div>
+
+
+                    <div class="card" style="width: 18rem;">
+                        <h3 class="card-text">VVIP Toilets</h3>
+                        <img src="img/img8.jpeg" class="card-img-top" alt="...">
+                        <div class="card-description">
+                            <p>Our VVIP toilets are designed for luxury and comfort, featuring premium fixtures, running water sinks, and essential amenities. Perfect for high-end events where guest satisfaction is paramount.</p>
+                        </div>
+                    </div>
+
+                    <div class="card" style="width: 18rem;">
+                        <h3 class="card-text">Mobile Coldroom</h3>
+                         <img src="img/img3.jpeg" class="card-img-top" alt="...">
+                        <div class="card-description">
+                            <p>Our mobile cold rooms are designed to keep your food and beverages at the perfect temperature, ensuring they stay fresh and appetizing throughout your event.</p>
+                        </div>
+                    </div>
+                    <div class="card" style="width: 18rem;">
+                        <h3 class="card-text">Sound Systems</h3>
+                          <img src="img/img7.jpg" class="card-img-top" alt="...">
+                        <div class="card-description">
+                            <p>Our sound systems are designed to deliver crystal-clear audio for your events, ensuring that every moment is captured and enjoyed.</p>
+                        </div>
+                    </div>
+                </div>
+
+        </div>
+
 <!-- About Owner Section -->
-<div id="about" class="about-container">
+<section id="about" class="about-container">
     <div class="about-content">
         <h1>About Owner</h1>
         <p>Gambu-Line Hiring Services is a service delivery business owned by Mzolisi Ndungane, proudly operating in and around Mthatha. We specialize in providing essential event equipment to support a wide range of occasions, including weddings, funerals, church services, and family gatherings.
@@ -77,7 +99,7 @@ contactLink="#contact"
     </div>
         <img class="about-img" src="img/img2.jpeg" width="400" height="600" alt="image of owner">
 
-</div>
+</section>
 <!-- Contact Section -->
 <div class="contact-section" id="contact">
     <div class="contact-content">
@@ -96,9 +118,35 @@ contactLink="#contact"
         </div>
 
 
-
 </div>
-<main-footer></main-footer>
+
+<footer class="footer mt-auto py-3 bg-light">
+    <div class="footer-container">
+            <div class="footer-content">
+                <div class="word">
+                    <h3> Menu</h3>
+                    <p><a href="#home">Home</a></p>
+                    <p><a href="#about">About</a></p>
+                    <p><a href="#services">Services</a></p>
+                    <p><a href="#contact">Contact</a></p>
+                </div>
+                <div class="word">
+                <h3>Contact</h3>
+                <p>nmzondugwane@gmail.com</p>
+                </div>
+                <div class="word">
+                <h3> Location</h3>
+                <p>Delivering in and around Mthatha</p>
+                </div>
+                <div class="copyright">
+                    <p>Copyright © 2026 Gambuline Hiring Services | Powered by Gambuline Hiring Services</p>
+                </div>
+
+
+            </div>
+    </div>
+
+</footer>
 
 </body>
 </html>

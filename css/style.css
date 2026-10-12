@@ -1,17 +1,18 @@
 :root {
     /*colours*/
-    --primary-colour: #E2E1EB;
+    --primary-colour: white;
     --secondary-color: #BF8440;
     --color-1: #747256;
-    --color-2: #322d27;
+    --color-2: hsl(31,70%,80%) ;
     --color-3: hsl(31,50%,30%);
+    --color-4: darkgreen;
 
     /*font size*/
     --font-size-base: 1rem;
     --font-size-lg: 1.25rem;
     --font-size-xl: 2rem;
     --font-size-2xl: 3rem;
-    --font-size-3xl: 6rem;
+    --font-size-3xl: 4rem;
 
     /*border radius*/
     --radius-sm: 0.5rem;
@@ -72,16 +73,24 @@ nav ul li a {
     font-weight: bold;
 }
 nav a:hover{
-    color:var(--color-3)
+    text-decoration: underline;
+    color: #BF8440;
 }
 nav a:active{
     color:var(--color-3)
 }
 
 /*Home section*/
+#home{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("../img/img9.jpg");
+    background-size: cover;
+    background-position: center;
+
+}
 .home-container {
     display: flex;
     align-items: center;
+    text-align: center;
     justify-content: space-between;
     padding: var(--padding-lg);
     min-height: 80vh;
@@ -89,16 +98,24 @@ nav a:active{
     background-color: var(--primary-colour);
 }
 
+
 .home-text {
     flex: 1;
+}
+.home-text h4 {
+font-size: var(--font-size-xl);
+    color: var(--primary-colour);
+    font-family: Poppins, sans-serif;
+    margin-bottom: var(--margin-sm);
+    font-weight: lighter;
 }
 
 .home-text h1 {
     font-size: var(--font-size-3xl);
-    color: var(--secondary-color);
+    color: var(--primary-colour);
     margin-bottom: var(--margin-md);
     line-height: 1.1;
-    font-weight: normal;
+    font-weight: lighter;
     animation: fadeInDown 1.2s ease-in; /* Heading animation */
 }
 
@@ -131,7 +148,10 @@ nav a:active{
     font-weight: bold;
 }
 .cta-button:hover{
-    background-color: var(--color-2)
+    background-color: hsl(31,60%,20%);
+    transform: translateY(-5px);
+    transition: all 0.3s ease-in-out;
+
 }
 
 .home-img {
@@ -158,7 +178,7 @@ nav a:active{
 
 }
 .service-container{
-    background-color: var(--color-2);
+    background-color: var(--primary-colour);
     padding: var(--padding-lg);
     flex-direction: column;
     text-align: center; /* Center the inline-flex cards */
@@ -169,7 +189,7 @@ nav a:active{
     align-items: center; /* Center content within the card */
     padding: var(--padding-md); /* Internal padding */
     border-radius: var(--radius-md); /* Rounded corners */
-    background-color: var(--color-2);
+    background-color: var(--color2);
     margin: var(--margin-md); /* Space between cards */
     max-width: 300px; /* Limit card width */
     vertical-align: top; /* Align cards at the top if they have different heights */
@@ -204,7 +224,6 @@ nav a:active{
 }
 /*Service Page*/
 .services-landing-page {
-    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../img/img6.jpeg");
     background-size: cover;
     background-position: center;
     width: 100%;
@@ -454,8 +473,11 @@ nav a:active{
 /*make the website responsive*/
 @media (max-width: 768px) {
     :root {
-        --font-size-3xl: 3.5rem;
-        --font-size-2xl: 2.25rem;
+        --font-size-3xl: 2rem;
+        --font-size-2xl: 1.5rem;
+        --font-size-xl: 1.25rem;
+        --font-size-lg: 1.125rem;
+        --font-size-base: 1rem;
     }
 
     .home-container, 
@@ -468,6 +490,11 @@ nav a:active{
     .home-text, .about-content, .contact-content {
         flex: none;
         width: 100%;
+        height: 100%;
+        font-size: var(--font-size-base);
+    }
+    .home-text{
+        text-align: left;
     }
 
     .home-img, .about-img {

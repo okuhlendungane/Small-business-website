@@ -22,4 +22,8 @@
  - HTML5
  - CSS3
  - JavaScript (ES6+)
+
+## Live Link
+Hosted using github pages
+https://okuhlendungane.github.io/Small-business-website/
  

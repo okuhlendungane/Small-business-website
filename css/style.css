@@ -103,7 +103,7 @@ nav a:active{
     display: flex;
     align-items: center;
     text-align: center;
-    justify-content: space-between;
+    justify-content: center;
     padding: var(--padding-lg);
     min-height: 90vh;
     gap: var(--gap-lg);
@@ -131,6 +131,7 @@ font-size: var(--font-size-xl);
     line-height: 1.1;
     font-weight: lighter;
     animation: fadeInDown 1.2s ease-in; /* Heading animation */
+    text-align: center;
 }
 
 
@@ -179,7 +180,7 @@ font-size: var(--font-size-xl);
     font-family: Poppins, sans-serif;
     font-size: var(--font-size-lg);
     color: var(--color-3);
-    max-width: 100%;
+    max-width: 1200px;
 
 }
 
@@ -197,32 +198,39 @@ font-size: var(--font-size-xl);
 .service-container{
     background-color: var(--primary-colour);
     padding: var(--padding-md);
+    display: flex;
     flex-direction: column;
-    justify-items: center;
-    justify-content: center;
-    text-align: center; /* Center the inline-flex cards */
+    align-items: center;
+    text-align: center;
     margin: var(--margin-lg);
 }
 
 
 .card-container {
-    display:grid;
-    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-    gap: 5rem;
-    width :100%;
-    max-width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 15rem), 1fr));
+    gap: clamp(1rem, 3vw, 2rem);
+    width: 100%;
+    max-width: 1200px;
+    margin-inline: auto;
 }
 .card{
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
-    width:100%;
+    width: 100%;
+    min-width: 0;
     padding: var(--padding-md);
     border-radius: var(--radius-md);
     background-color: var(--color-2);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    margin: var(--margin-sm);
+    margin: 0;
+}
+.card-img-top {
+    width: 100%;
+    height: 12rem;
+    object-fit: cover;
 }
 .card-description{
     display: none;
@@ -260,7 +268,9 @@ font-size: var(--font-size-xl);
     text-decoration: none;
     border-radius: var(--radius-sm);
     font-weight: bold;
+
 }
+
 .primary-button:hover{
     background-color: var(--color-1);
 }
@@ -436,25 +446,33 @@ font-size: var(--font-size-xl);
         max-width: 400px;
         margin: 0 auto;
     }
-    /*service section*/
-    .service-container{
-        flex-direction: column;
-        text-align: center;
-    }
+
 
 
     .home-container,
     .about-container,
-    .service-container,
     .contact-section {
         flex-direction: column;
         text-align: center;
     }
 
-    .home-text, .about-content, .contact-content,.service-container{
+    .home-text, .about-content, .contact-content{
         width: 100%;
         height: 100%;
 
+    }
+
+    .service-container {
+        width: auto;
+        margin: var(--margin-md) 0;
+    }
+
+    .card-description {
+        display: block;
+    }
+
+    .card:hover .card-img-top {
+        display: block;
     }
 
 
@@ -490,6 +508,11 @@ font-size: var(--font-size-xl);
         flex-direction: column;
         gap: var(--gap-sm);
         display:none;
+    }
+    .home-text, .about-content, .contact-content{
+        width: 100%;
+        height: 100%;
+
     }
 
 }

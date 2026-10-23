@@ -279,7 +279,8 @@ font-size: var(--font-size-xl);
 
 /*About section*/
 .about-container{
-    display: inline-flex;
+    display: flex;
+    width: 100%;
     flex-direction: row;
     padding: var(--padding-lg);
     align-items: center;
@@ -331,7 +332,8 @@ font-size: var(--font-size-xl);
 
 .contact-content {
     text-align: left;
-    width: 700px;
+    width: 100%;
+    max-width: 700px;
     flex-direction: column;
     /*flex:1;*/
     justify-items: center;
@@ -429,13 +431,20 @@ font-size: var(--font-size-xl);
         --font-size-base: 1rem;
     }
     nav ul {
-        display:none;
-        flex-wrap: wrap;
+        display: none;
+        flex-direction: column;
+        align-items: center;
         gap: var(--gap-sm);
+        padding: var(--padding-md) 0 0;
     }
+
+    nav ul.show {
+        display: flex;
+    }
+
     .menu-toggle{
         display: block;
-        justify-content: right;
+        margin-left: auto;
         color: var(--primary-colour);
     }
 
@@ -457,10 +466,15 @@ font-size: var(--font-size-xl);
         text-align: center;
     }
 
-    .home-text, .about-content, .contact-content{
-        width: 100%;
-        height: 100%;
+    .home-container {
+        min-height: 70vh;
+        padding: var(--padding-lg) var(--padding-md);
+    }
 
+    .home-text,
+    .about-content,
+    .contact-content {
+        width: 100%;
     }
 
     .service-container {
@@ -481,7 +495,6 @@ font-size: var(--font-size-xl);
         width: 50%;
         max-width: 400px;
         margin: 0 auto;
-
     }
 
     .about-container h1, .contact-content h3, .contact-content h2 {
@@ -505,25 +518,34 @@ font-size: var(--font-size-xl);
 }
 
 @media (max-width: 480px){
-    :root {
-        --font-size-3xl: 2rem;
-        --font-size-2xl: 1.5rem;
-        --font-size-xl: 1.25rem;
-        --font-size-lg: 1.125rem;
-        --font-size-base: 1rem;
+    .home-container,
+    .about-container,
+    .contact-section {
+        padding: var(--padding-md);
     }
-    .nav ul {
-        flex-direction: column;
-        gap: var(--gap-sm);
-        display:none;
-    }
-    .home-text, .about-content, .contact-content{
-        width: 100%;
-        height: 100%;
 
+    .service-container {
+        padding: var(--padding-md);
     }
+
     .service-container h1{
         font-size: var(--font-size-xl);
+    }
+
+    .card-container {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-form form {
+        padding: var(--padding-md);
+    }
+
+    .contact-form label {
+        font-size: var(--font-size-lg);
+    }
+
+    .copyright {
+        text-align: center;
     }
 
 }

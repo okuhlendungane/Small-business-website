@@ -272,7 +272,7 @@ font-size: var(--font-size-xl);
 }
 
 .primary-button:hover{
-    background-color: var(--color-1);
+    background-color: hsl(31,60%,20%);
 }
 
 
